@@ -4,9 +4,12 @@
         "@symfony/webpack-encore": "^0.28.0",
         "bootstrap": "^4.3.1",
         "core-js": "^3.0.0",
+        "eslint": "^6.6.0",
+        "eslint-plugin-react": "^7.16.0",
         "jquery": "^3.4.1",
         "node-sass": "^4.13.0",
         "popper.js": "^1.16.0",
+        "redux-devtools-extension": "^2.13.8",
         "regenerator-runtime": "^0.13.2",
         "sass-loader": "^7.3.1",
         "webpack-notifier": "^1.6.0"
@@ -17,16 +20,20 @@
         "dev-server": "encore dev-server",
         "dev": "encore dev",
         "watch": "encore dev --watch",
-        "build": "encore production --progress"
+        "build": "encore production --progress",
+        "lint": "eslint  assets/js/*.js"
     },
     "dependencies": {
         "@babel/plugin-proposal-class-properties": "^7.5.5",
         "@babel/plugin-transform-runtime": "^7.6.2",
         "axios": "^0.19.0",
         "prop-types": "^15.7.2",
+        "ramda": "^0.26.1",
         "react": "^16.11.0",
         "react-dom": "^16.11.0",
         "react-router-dom": "^5.1.2",
-        "reactstrap": "^8.1.1"
+        "reactstrap": "^8.1.1",
+        "redux": "^4.0.4",
+        "seamless-immutable": "^7.1.4"
     }
 }
