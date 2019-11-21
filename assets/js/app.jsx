@@ -6,27 +6,25 @@
  */
 /* eslint-disable */
 import React from 'react';
-import { Link, Route, Switch } from 'react-router-dom';
+import { NavLink, Route } from 'react-router-dom';
+import { Container } from 'semantic-ui-react';
 
 import Home from "./components/home";
 import AboutUs from "./components/about-us";
 
 class App extends React.Component{
     render() {
-        console.log('Render');
         return (
-            <div>
-                <nav className="navbar navbar-light">
-                    <li><Link to="/">Homes</Link></li>
-                    <li><Link to="/about-us">About Us</Link></li>
-                </nav>
-
-                <Switch>
+            <Container>
+                <div>
+                    <div className="ui two item menu">
+                        <NavLink className="item" activeClassName="active" exact to="/">Homes</NavLink>
+                        <NavLink className="item" activeClassName="active" exact to="/about-us">About Us</NavLink>
+                    </div>
                     <Route exact={true} path="/" component={ Home } />
                     <Route path="/about-us" component={ AboutUs } />
-                </Switch>>
-
-            </div>
+                </div>
+            </Container>
         )
     }
 }
